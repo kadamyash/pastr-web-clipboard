@@ -115,7 +115,7 @@ const PasteBuilder = (props) => {
                     <Button variant="warning" type="reset" >
                         Clear
                     </Button>
-                    <Button id="save-btn" variant="success" type="button" >
+                    <Button id="save-btn" variant="success" type="button" onClick={handleShowA} >
                         Save
                     </Button>
                     <br></br>
