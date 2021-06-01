@@ -13,7 +13,7 @@ function ViewPaste(props) {
     const [pasteData, setPasteData] = useState(null);
 
     var url = window.location.href;
-    const pattern = url.match(/p\/(.*)/);
+    const pattern = url.match(/paste\/(.*)/);
     let searchParam
     if(pattern!==null){
         searchParam = pattern[1]
