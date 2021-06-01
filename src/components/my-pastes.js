@@ -20,7 +20,7 @@ function MyPastes(props) {
                     <Card.Text style={{fontSize: '0.5em', opacity: '0.5'}}>
                     Unlisted Paste
                     </Card.Text>
-                    <Link to={"/p/"+paste.id}><Button variant="primary">View Paste</Button></Link>
+                    <Link to={"/paste/"+paste.id}><Button variant="primary">View Paste</Button></Link>
                 </Card.Body>
                 </Card>
                 
