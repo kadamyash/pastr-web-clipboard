@@ -24,3 +24,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.font-fancy{
+  font-family: 'Russo One', sans-serif;
+}
+
+.font-mono{
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+}
+
+.form{
+  padding: 1em;
+}
+
+.avatar{
+  border-radius: 1em;
+  width: 1em;
+  height: 1em;
+}
