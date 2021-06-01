@@ -1,27 +1,53 @@
 :root{
   --darker: #1b1717;
+  --light-stuff: #f5f5f5;
   /* https://colorhunt.co/palette/273305 */
-  --dark: #393e46;
-  --blue: #00adb5;
-  --tint: #aad8d3;
-  --white: #eeeeee;
+  --c-dark: #393e46;
+  --c-blue: #00adb5;
+  --c-tint: #aad8d3;
+  --c-white: #eeeeee;
 /* https://colorhunt.co/palette/273897 */
-  --light: #eeebdd;
-  --red: #ce1212;
-  --red-intense: #810000;
+  --c-light: #eeebdd;
+  --c-red: #ce1212;
+  --c-red-intense: #810000;
 }
 
 .App {
   text-align: center;
+  height: 100%;
+}
+
+#root{
+  height: 100%;
+}
+
+.main{
+  height: 90%;
+}
+
+.intro-text{
+  width: 50%;
+}
+
+.h-text{
+  margin-bottom: 1em;
 }
 
 /* bootstrap styles */
 
 #boot-nav{
+  height: 10%;
   padding: 1em 3em;
   background-color: var(--darker);
 }
 
+.main .jumbotron{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100% !important;
+}
 
 /* class override config */
 
@@ -31,8 +57,52 @@
   font-weight: 500 !important;
 }
 
-.nav-link .btn{
-  background-color: var(--blue);
-  border: none;
+.login-btn{
+  background-color: var(--c-blue) !important;
+  border: none !important;
   font-weight: 500 !important;
+}
+
+.login-btn:hover{
+  background-color: var(--blue) !important;
+}
+
+.logout-btn{
+  background-color: var(--c-dark) !important;
+  border: none !important;
+  font-weight: 500 !important;
+}
+
+.logout-btn:hover{
+  background-color: var(--red) !important;
+}
+
+#pri-btn{
+  background-color: var(--c-blue);
+  border: none;
+}
+
+#pri-btn:hover{
+  background-color: var(--c-dark);
+}
+
+#delete-btn{
+  background-color: var(--c-red);
+  border: none;
+}
+
+#delete-btn:hover{
+  background-color: var(--c-dark);
+}
+
+/* responsive css for a phone */
+
+@media screen and (max-width: 800px){
+  .intro-text{
+    width: 90%;
+  }
+
+  #boot-nav{
+    padding: 1em 1em;
+  }
 }
