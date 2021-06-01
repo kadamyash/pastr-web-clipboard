@@ -1,38 +1,38 @@
+:root{
+  --darker: #1b1717;
+  /* https://colorhunt.co/palette/273305 */
+  --dark: #393e46;
+  --blue: #00adb5;
+  --tint: #aad8d3;
+  --white: #eeeeee;
+/* https://colorhunt.co/palette/273897 */
+  --light: #eeebdd;
+  --red: #ce1212;
+  --red-intense: #810000;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* bootstrap styles */
+
+#boot-nav{
+  padding: 1em 3em;
+  background-color: var(--darker);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* class override config */
+
+.nav-link{
+  display: flex !important;
+  align-items: center !important;
+  font-weight: 500 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link .btn{
+  background-color: var(--blue);
+  border: none;
+  font-weight: 500 !important;
 }
