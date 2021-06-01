@@ -39,7 +39,7 @@ function App() {
         <Route path="/" exact><Main store={firestore} user={auth}></Main></Route>
         <Route path="/add-paste" exact><AddPaste store={firestore} user={auth}></AddPaste></Route>
         <Route path="/my-pastes" exact><MyPastes store={firestore} user={auth}></MyPastes></Route>
-        <Route path={`/p/:id`} exact><ViewPaste store={firestore} user={auth}></ViewPaste></Route>
+        <Route path={`/paste/:id`} exact><ViewPaste store={firestore} user={auth}></ViewPaste></Route>
         <Route path="/unknown-error" exact><Error store={firestore} user={auth}></Error></Route>
       </Switch>
     </div>
