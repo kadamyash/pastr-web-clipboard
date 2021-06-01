@@ -9,7 +9,9 @@ import {Switch, Route } from 'react-router-dom'
 import 'firebase/firestore';
 import 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import firebase from 'firebase/app' 
+import firebase from 'firebase/app'
+import ViewPaste from './components/view-paste';
+import MyPastes from './components/my-pastes';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCr9dpueAisQXJFqx8R0GfuyouMkjtNsaI",
@@ -36,6 +38,8 @@ function App() {
       <Switch>
         <Route path="/" exact><Main store={firestore} user={auth}></Main></Route>
         <Route path="/add-paste" exact><AddPaste store={firestore} user={auth}></AddPaste></Route>
+        <Route path="/my-pastes" exact><MyPastes store={firestore} user={auth}></MyPastes></Route>
+        <Route path={`/p/:id`} exact><ViewPaste store={firestore} user={auth}></ViewPaste></Route>
         <Route path="/unknown-error" exact><Error store={firestore} user={auth}></Error></Route>
       </Switch>
     </div>

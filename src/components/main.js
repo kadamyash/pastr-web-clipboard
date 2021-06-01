@@ -27,14 +27,14 @@ function Main(props) {
 
     return (
         <div className="main">
-            <Jumbotron>
+            <Jumbotron id={props.user.currentUser?"signed-main":"unsigned-main"}>
                 <h1 className="h-text">Welcome aboard{props.user.currentUser?', '+props.user.currentUser.displayName:null}</h1>
                 <p className="intro-text">
-                    <strong>PASTR</strong> is an online clipboard where in you can type/paste your thoughts, ideas, scripts or almost any raw text you wish to show to the world with one link. 
+                    <strong className="font-fancy">PASTR</strong> is an online clipboard where in you can type/paste your thoughts, ideas, scripts or almost any raw text you wish to show to the world with one link. 
                     This is a beta project and you need a Google Account to write in, save and share pasteboards. Have fun!
                 </p>
                 <p>
-                    <Button id="pri-btn" variant="dark" onClick={()=>addPaste()}>Start PASTRing</Button>
+                    <Button id="pri-btn" variant="dark" onClick={()=>addPaste()}>Start PASTING</Button>
                 </p>
             </Jumbotron>
             <Modal show={show} onHide={handleClose}>
