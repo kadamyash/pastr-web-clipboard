@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import {Col, Jumbotron, Row, Spinner} from 'react-bootstrap'
+import '../App.css'
 
 function ViewPaste(props) {
 
