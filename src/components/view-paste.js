@@ -44,7 +44,7 @@ function ViewPaste(props) {
                 </Row>
                 <Row>
                     <Col>
-                        <p className="font-mono content">{pasteData.paste}</p>
+                        <div className="font-mono content"><pre style={{whiteSpace: 'pre-wrap'}}>{pasteData.paste}</pre></div>
                     </Col>
                 </Row>
                 <Row>
