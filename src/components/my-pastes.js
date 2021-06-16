@@ -11,9 +11,9 @@ function MyPastes(props) {
     const [myPastes] = useCollectionData(query, {idField: 'id'});
 
 
-    function copyLinkToBoard() {
+    function copyLinkToBoard(link) {
         /* Get the text field */
-        var copyText = document.getElementById("myInput");
+        var copyText = link;
       
         /* Select the text field */
         copyText.select();
@@ -64,7 +64,7 @@ function MyPastes(props) {
                     </Card.Text>
                     <div >
                         <input type="text" value={"https://pastr-web.vercel.app/paste/"+paste.id} id="myInput"/>
-                        <Button onClick={()=>copyLinkToBoard()} variant="light" size="sm">📋 Copy Link</Button>
+                        <Button onClick={()=>copyLinkToBoard("https://pastr-web.vercel.app/paste/"+paste.id)} variant="light" size="sm">📋 Copy Link</Button>
                     </div>
                     <br/>
                     <Link to={"/paste/"+paste.id}><Button variant="primary" id="pri-btn">View Paste</Button></Link>
